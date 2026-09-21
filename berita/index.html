@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kabar & Berita Terkini - Desa Melung</title>
+  
+  <!-- Pastikan path CSS ini benar (pakai ../ jika CSS ada di luar folder berita) -->
   <link rel="stylesheet" href="style-custom.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,26 +24,25 @@
         </div>
       </div>
       <div class="top-time">
-        <i class="fa-regular fa-clock"></i> Rabu, 16 Sep 2026 • 12:53:44 WIB
+        <i class="fa-regular fa-clock"></i> Senin, 21 Sep 2026 • 12:30:00 WIB
       </div>
     </div>
   </header>
 
+  <!-- NAVBAR YANG SUDAH DISESUAIKAN -->
   <nav class="main-navbar">
     <div class="container-boxed">
       <ul class="nav-menu">
-        <!-- Direct Link ke Halaman Utama -->
-        <li><a href="../indexmenu.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
-        <!-- Direct Link ke Halaman Profil / Sejarah -->
-        <li><a href="../indexmenu.html" class="nav-link">Profil</a></li>
-        
-        <!-- Menu Popup Simulasi -->
-        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('Statistik')">Statistik</a></li>
-        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('Potensi')">Potensi</a></li>
-        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('Transparansi')">Transparansi</a></li>
-        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('Kabar Desa')">Kabar Desa</a></li>
-        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('Kontak')">Kontak</a></li>
-        <li><a href="indexberita.html" class="nav-link active">Berita</a></li>
+        <li><a href="../index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="../index.html" class="nav-link">Profil</a></li>
+        <!-- Pemberitahuan Pengembangan -->
+        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('😊')">Statistik</a></li>
+        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('😊')">Potensi</a></li>
+        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('😊')">Transparansi</a></li>
+        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('😊')">Kabar Desa</a></li>
+        <li><a href="#" class="nav-link" onclick="bukaMenuPopup('😊')">Kontak</a></li>
+        <!-- Link Masuk ke Berita -->
+        <li><a href="index.html" class="nav-link active">Berita</a></li>
       </ul>
     </div>
   </nav>
@@ -56,7 +57,6 @@
         </div>
       </div>
       <div class="hero-right">
-        <!-- Direct Link kembali ke Beranda -->
         <a href="../index.html" class="btn-kembali">
           <i class="fa-solid fa-house"></i> Kembali ke Beranda
         </a>
@@ -71,7 +71,7 @@
         <div class="news-header">
           <div>
             <div class="title-row">
-              <i class="fa-regular fa-newspaper news-icon-square"></i>
+              <i class="fa-regular fa-newspaper section-title" style="font-size: 20px;"></i>
               <h2 class="section-title">Seluruh Berita Desa</h2>
             </div>
             <p class="section-subtitle">Publikasi dan berita resmi yang dirilis Pemerintah Melung.</p>
@@ -79,38 +79,36 @@
           <div class="badge-total">Total 519 Berita</div>
         </div>
 
-        <div class="news-grid">
+        <div class="news-grid" id="newsGrid">
           
-          <!-- KARTU BERITA 1 -->
           <article class="news-card">
             <a href="isiberita.html" class="card-image-wrap">
-              <span class="card-badge"><i class="fa-regular fa-folder mr-1"></i> BERITA DESA</span>
+              <span class="card-badge">BERITA DESA</span>
               <img src="ipsal.png" alt="IPSAL Sukses Gelar Kegiatan" class="card-thumb">
             </a>
-            
             <div class="card-content">
               <h3 class="card-title">
                 <a href="isiberita.html">IPSAL Sukses Gelar Kegiatan Menyambut HUT RI Ke-81</a>
               </h3>
-              
               <div class="card-footer">
                 <div class="meta-stats">
                   <span class="date-text"><i class="fa-regular fa-calendar"></i> 02 Sep 2026</span>
                   <span class="views-text"><i class="fa-regular fa-eye"></i> 88</span>
                 </div>
-                <a href="isiberita.html" class="btn-baca">Baca <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="../isi-berita/index.html" class="btn-baca">Baca <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </article>
 
-          <!-- KARTU BERITA 2 -->
           <article class="news-card">
             <a href="#" class="card-image-wrap">
-              <span class="card-badge"><i class="fa-regular fa-folder mr-1"></i> BERITA DESA</span>
-              <img src="HUT RI.jfif" alt="Peringatan HUT RI" class="card-thumb" style="object-fit: contain; padding: 20px;">
+              <span class="card-badge">BERITA DESA</span>
+              <img src="HUT RI.jfif" alt="Peringatan HUT RI" class="card-thumb">
             </a>
             <div class="card-content">
-              <h3 class="card-title"><a href="#">Peringatan HUT RI Ke-81 di Desa Melung dengan Partisipasi Beragam</a></h3>
+              <h3 class="card-title">
+                <a href="#">Peringatan HUT RI Ke-81 di Desa Melung dengan Partisipasi Beragam</a>
+              </h3>
               <div class="card-footer">
                 <div class="meta-stats">
                   <span class="date-text"><i class="fa-regular fa-calendar"></i> 18 Aug 2026</span>
@@ -121,14 +119,15 @@
             </div>
           </article>
 
-          <!-- KARTU BERITA 3 -->
           <article class="news-card">
             <a href="#" class="card-image-wrap">
-              <span class="card-badge"><i class="fa-regular fa-folder mr-1"></i> BERITA DESA</span>
-              <img src="krakatau.jfif" alt="Tertib Administrasi" class="card-thumb" style="object-fit: contain; padding: 20px;">
+              <span class="card-badge">BERITA DESA</span>
+              <img src="krakatau.jfif" alt="Tertib Administrasi" class="card-thumb">
             </a>
             <div class="card-content">
-              <h3 class="card-title"><a href="#">Wujudkan Tertib Administrasi, Pemdes Melung Rilis Daftar Syarat Pelayanan</a></h3>
+              <h3 class="card-title">
+                <a href="#">Wujudkan Tertib Administrasi, Pemdes Melung Rilis Daftar Lengkap Syarat Pelayanan</a>
+              </h3>
               <div class="card-footer">
                 <div class="meta-stats">
                   <span class="date-text"><i class="fa-regular fa-calendar"></i> 07 Jul 2026</span>
@@ -145,7 +144,7 @@
           <a href="#" class="page-btn active">1</a>
           <a href="#" class="page-btn">2</a>
           <a href="#" class="page-btn">3</a>
-          <span class="page-dots">...</span>
+          <span style="color: #94a3b8; font-weight: bold;">...</span>
           <a href="#" class="page-btn">52</a>
           <a href="#" class="page-btn"><i class="fa-solid fa-chevron-right"></i></a>
         </div>
@@ -154,13 +153,12 @@
     </div>
   </main>
 
-  <!-- MODAL POPUP -->
   <div class="nav-modal-overlay" id="navModal">
     <div class="nav-modal-box">
       <span class="nav-modal-close" onclick="tutupMenuPopup()">&times;</span>
       <div class="nav-modal-icon"><i class="fa-solid fa-circle-info"></i></div>
       <h3 id="navModalTitle">Informasi Menu</h3>
-      <p>Anda menekan menu <b id="navModalName">Nama Menu</b>. Halaman ini sedang disimulasikan sebagai Pop-up sesuai permintaan.</p>
+      <p>Anda menekan menu <b id="navModalName">Nama Menu</b>. Halaman ini sedang disimulasikan sebagai Pop-up.</p>
       <button class="nav-modal-btn" onclick="tutupMenuPopup()">Tutup</button>
     </div>
   </div>
@@ -224,6 +222,6 @@
     </div>
   </footer>
 
-  <script src="script berita.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
